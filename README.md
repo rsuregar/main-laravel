@@ -1,6 +1,6 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-## About Laravel
+## How to use
 `git clone https://github.com/rsuregar/main-laravel.git`
 
 `cd main-laravel and run composer install`

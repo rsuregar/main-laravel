@@ -15,7 +15,7 @@ class DataBarangController extends Controller
     public function index()
     {
         //
-        $data = dataBarang::all();
+        $data = dataBarang::with('kategori')->get();
         $kategori = \App\refKategoriBarang::all();
         //SELECT * from data_barangs;
         return view('dataBarang.index', compact('data', 'kategori'));
@@ -65,6 +65,9 @@ class DataBarangController extends Controller
     public function edit(dataBarang $dataBarang)
     {
         //
+        $kategori = \App\refKategoriBarang::all();
+        $data = $dataBarang;
+        return view('dataBarang.edit', compact('data', 'kategori'));
     }
 
     /**
@@ -77,6 +80,8 @@ class DataBarangController extends Controller
     public function update(Request $request, dataBarang $dataBarang)
     {
         //
+        $dataBarang->update($request->all());
+        return redirect()->route('dataBarang.index');
     }
 
     /**
@@ -88,5 +93,7 @@ class DataBarangController extends Controller
     public function destroy(dataBarang $dataBarang)
     {
         //
+        $dataBarang->delete();
+        return redirect()->route('dataBarang.index');
     }
 }

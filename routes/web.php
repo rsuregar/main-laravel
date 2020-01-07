@@ -39,7 +39,7 @@ Route::post('refKategoriBarang', 'RefKategoriBarangController@store')->name('ref
 
 Route::get('refKategoriBarang/{refKategoriBarang}/hapuskandata', 'RefKategoriBarangController@destroy')->name('delete');
 
-
+Route::get('dataBarang/{dataBarang}/hapus', 'DataBarangController@destroy')->name('dataBarang.hapus');
 
 Route::resource('dataBarang', 'DataBarangController');
 

@@ -22,7 +22,7 @@
         <label>Kategori Barang</label>
         <select name="refkategori_id">
             @foreach ($kategori as $item)
-        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                <option value="{{ $item->id }}">{{ $item->name }}</option>
             @endforeach
         </select>
     </div>
@@ -47,7 +47,37 @@
             <th>Kategori</th>
             <th>Nama Barang</th>
             <th>Status</th>
+            <th>Aksi</th>
         </tr>
+            @forelse ($data as $item)
+                <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $item->kode }}</td>
+                    <td>{{ $item->kategori->name}}</td>
+                    <td>{{ $item->nama }}</td>
+                    <td>
+                        @switch($item->status)
+                            @case(1)
+                                Bagus
+                                @break
+                            @case(2)
+                                Kurang Bagus
+                                @break
+                            @default
+                                Rusak
+                        @endswitch
+                    </td> 
+                <td>
+                    <a href="{{ route('dataBarang.edit', $item->id)}}">Edit</a>
+                    <a href="{{ route('dataBarang.hapus', $item->id)}}">Hapus</a>
+                </td>
+                </tr>
+            @empty
+            <tr>
+                <td colspan="5">Tidak ada data</td>
+            </tr> 
+            @endforelse
+        
     </table>
 </body>
 </html>

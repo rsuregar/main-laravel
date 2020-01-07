@@ -17,7 +17,7 @@ class CreateDataBarangsTable extends Migration
             $table->bigIncrements('id');
             $table->string('kode', 12)->unique(); //varchar 255
             $table->string('nama')->nullable(); // varchar 255
-            $table->integer('refkategori_id'); //int 
+            $table->integer('ref_kategori_id'); //int 
             $table->integer('status'); //int
             $table->timestamps();
         });

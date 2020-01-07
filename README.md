@@ -1,15 +1,15 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 ## How to use
-`git clone https://github.com/rsuregar/main-laravel.git`
+1. on terminal, `git clone https://github.com/rsuregar/main-laravel.git`
 
-`cd main-laravel` and run `composer install`
+2. on terminal, `cd main-laravel` and run `composer install`
 
-create database on your phpmyadmin with name `db_laravel`
+3. create database on your phpmyadmin/mysql with name `db_laravel`
 
-run `php artisan migrate`
+4. on terminal, run `php artisan migrate`
 
-run `php artisan db:seed --class:refKategoriBarangSeeder` to generate dummy data
+5. on terminal, run `php artisan db:seed --class:refKategoriBarangSeeder` to generate dummy data
 
-run `php artisan db:seed --class:UserSeed` to generate dummy users
+5. on terminal, run `php artisan db:seed --class:UserSeed` to generate dummy users
 

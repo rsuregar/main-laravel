@@ -3,13 +3,13 @@
 ## How to use
 `git clone https://github.com/rsuregar/main-laravel.git`
 
-`cd main-laravel and run composer install`
+`cd main-laravel` and run `composer install`
 
-`create database on your phpmyadmin with name db_laravel`
+create database on your phpmyadmin with name `db_laravel`
 
-`run php artisan migrate`
+run `php artisan migrate`
 
-`run php artisan db:seed --class:refKategoriBarangSeeder to generate dummy data`
+run `php artisan db:seed --class:refKategoriBarangSeeder` to generate dummy data
 
-`run php artisan db:seed --class:UserSeed to generate dummy users`
+run `php artisan db:seed --class:UserSeed` to generate dummy users
 

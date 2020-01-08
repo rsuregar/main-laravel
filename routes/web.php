@@ -42,5 +42,6 @@ Route::get('refKategoriBarang/{refKategoriBarang}/hapuskandata', 'RefKategoriBar
 Route::get('dataBarang/{dataBarang}/hapus', 'DataBarangController@destroy')->name('dataBarang.hapus');
 
 Route::resource('dataBarang', 'DataBarangController');
+Route::resource('datapeminjam', 'DatapeminjamController');
 
 

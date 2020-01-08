@@ -9,7 +9,7 @@
 
 4. on terminal, run `php artisan migrate`
 
-5. on terminal, run `php artisan db:seed --class:refKategoriBarangSeeder` to generate dummy data
+5. on terminal, run `php artisan db:seed --class=refKategoriBarangSeeder` to generate dummy data
 
-5. on terminal, run `php artisan db:seed --class:UserSeed` to generate dummy users
+5. on terminal, run `php artisan db:seed --class=UserSeed` to generate dummy users
 

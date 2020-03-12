@@ -52,19 +52,19 @@
 			<!-- End Logo Header -->
 
 			<!-- Navbar Header -->
-			@include('atlantis.component.header')
+			@include('atlantis.header.header')
 			<!-- End Navbar -->
 		</div>
 
 		<!-- Sidebar -->
-		@include('atlantis.component.sidebar')
+		@include('atlantis.sidebar.sidebar')
 		<!-- End Sidebar -->
 
 		<div class="main-panel">
 
             @yield('content')
 
-            @include('atlantis.component.footer')
+            @include('atlantis.footer')
 
 		</div>
 

@@ -19,10 +19,10 @@
                     <i class="fa fa-search"></i>
                 </a>
             </li> --}}
-            @include('atlantis.component.headercomponent.message')
-            @include('atlantis.component.headercomponent.notification')
-            @include('atlantis.component.headercomponent.quickaction')
-            @include('atlantis.component.headercomponent.profil')
+            @include('atlantis.header.message')
+            @include('atlantis.header.notification')
+            @include('atlantis.header.quickaction')
+            @include('atlantis.header.profil')
         </ul>
     </div>
 </nav>

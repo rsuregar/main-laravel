@@ -13,18 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('atlantis.index');
-});
+// Route::get('/', function () {
+//     return view('atlantis.index');
+// });
 
-Route::get('dashboard/index2', function () {
-    return view('atlantis.index2');
-})->name('index2');
+Route::view('/', 'atlantis.index');
+Route::view('dashboard/index2', 'atlantis.index2')->name('index2');
 
-Route::get('components/avatars', function () {
-    return view('atlantis.component.avatars');
-})->name('avatars');
-
+// Route::get('dashboard/index2', function () {
+//     return view('atlantis.index2');
+// })->name('index2');
 Auth::routes();
-
+Route::group(['prefix' => 'components'], function(){
+    Route::view('avatars', 'atlantis.components.avatars')->name('avatars');
+});
 Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('components/avatars', function () {
+//     return view('atlantis.components.avatars');
+// })->name('avatars');
+
+
+
+

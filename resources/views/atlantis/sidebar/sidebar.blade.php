@@ -1,7 +1,7 @@
 <div class="sidebar sidebar-style-2">
     <div class="sidebar-wrapper scrollbar scrollbar-inner">
         <div class="sidebar-content">
-            <div class="user">
+            {{-- <div class="user">
                 <div class="avatar-sm float-left mr-2">
                     <img src="{{ asset('atlantis') }}/assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
                 </div>
@@ -35,9 +35,9 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <ul class="nav nav-primary">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a data-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
                         <i class="fas fa-home"></i>
                         <p>Dashboard</p>
@@ -73,9 +73,9 @@
                     </a>
                     <div class="collapse" id="base">
                         <ul class="nav nav-collapse">
-                            <li>
+                        <li class="{{ collect(request()->segments())->last() =='avatars' ? 'active':'' }}">
                                 <a href="{{ route('avatars') }}">
-                                    <span class="sub-item">Avatars</span>
+                                <span class="sub-item">Avatars</span>
                                 </a>
                             </li>
                             <li>
